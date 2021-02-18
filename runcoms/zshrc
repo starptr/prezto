@@ -29,7 +29,7 @@ export GOPATH="$HOME/bin/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bi
 alias ggg="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
 # jabba paths
-[ -s "/home/yuto/.jabba/jabba.sh" ] && source "/home/yuto/.jabba/jabba.sh"
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 # Custom aliases
 source $ZSH_CUSTOM/aliases.sh
