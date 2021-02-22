@@ -31,6 +31,11 @@ alias ggg="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stef
 # jabba paths
 [ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
+# Add texlive to path
+export PATH="/usr/local/texlive/2020/bin/x86_64-linux:$PATH"
+export MANPATH="/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH"
+
 # Custom aliases
 source $ZSH_CUSTOM/aliases.sh
 
