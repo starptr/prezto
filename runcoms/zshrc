@@ -6,9 +6,9 @@
 #
 
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+#  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+#fi
 
 # Customize to your needs...
 
@@ -70,3 +70,26 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
+
+zinit wait for \
+	PZT::modules/environment \
+	PZT::modules/terminal \
+	PZT::modules/editor \
+	PZT::modules/history \
+	PZT::modules/directory \
+	PZT::modules/spectrum \
+	PZT::modules/utility \
+	PZT::modules/ssh \
+	PZT::modules/completion \
+	PZT::modules/python \
+	PZT::modules/ruby \
+	PZT::modules/git \
+	PZT::modules/syntax-highlighting \
+	PZT::modules/history-substring-search \
+	PZT::modules/prompt
+
+setopt promptsubst
+
+zinit ice svn atload'prompt sorin'
+zinit snippet PZT::modules/prompt
+#zstyle ':prezto:module:prompt' theme 'sorin'
