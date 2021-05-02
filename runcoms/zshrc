@@ -70,23 +70,21 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+alias zce="zinit ice"
 
 zinit snippet PZTM::environment
-zinit snippet PZTM::terminal
-zinit snippet PZTM::editor
-zinit snippet PZTM::history
-zinit snippet PZTM::directory
-zinit snippet PZTM::spectrum
-zinit snippet PZTM::utility
-zinit snippet PZTM::ssh
-zinit snippet PZTM::completion
-zinit snippet PZTM::python
-zinit snippet PZTM::ruby
+zinit snippet PZT::modules/terminal
+zinit snippet PZT::modules/editor
+zinit snippet PZT::modules/history
+zinit snippet PZT::modules/directory
+zinit snippet PZT::modules/spectrum
+zinit snippet PZT::modules/utility
+zinit snippet PZT::modules/ssh
+zinit snippet PZT::modules/completion
+#zinit snippet PZT::modules/ruby
 zinit snippet PZT::modules/git
 #zinit snippet PZT::modules/history-substring-search
 #zinit snippet PZTM::syntax-highlighting
-#zinit snippet PZTM::prompt
-#zinit snippet OMZP::git
 
 # Custom aliases
 source $ZSH_CUSTOM/aliases.sh
@@ -105,3 +103,7 @@ zinit snippet PZT::modules/prompt
 #zinit ice depth=1
 #zinit light romkatv/powerlevel10k
 
+zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
+zstyle ':prezto:module:python:virtualenv' initialize 'yes'
+zinit ice wait lucid
+zinit snippet PZT::modules/python
